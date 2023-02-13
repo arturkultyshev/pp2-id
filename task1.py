@@ -13,17 +13,12 @@ months = {
         12: 'Декабре'
     }
 
-
 number_of_month = int(input())
 if not number_of_month >= 1 and number_of_month <= 12:
     print('Требуется ввести реальный номер месяца')
 else:
     if number_of_month >= 3 and number_of_month <= 5:
-        print(f"Вы родились в {months[number_of_month]}. Птицы пели прекрасные песни")
-        """
         print('Вы родились в ' + months[number_of_month] + '. Птицы пели прекрасные песни')
-        """
-
     elif number_of_month >= 6 and number_of_month <= 8:
         print('Вы родились в ' + months[number_of_month] + '. Солнце светило ярче чем когда-либо')
     elif number_of_month >= 9 and number_of_month <= 11:
