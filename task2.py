@@ -1,4 +1,4 @@
-import math
+import work_with_data
 
 """
 ax^2 + bx + c = 0
