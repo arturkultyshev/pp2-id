@@ -1,4 +1,9 @@
-asdfghjklasdfghjklsdgfdsfdsfsd
-fsdfdasdfghjklsdgfdsfdsfsd fsdfd
-asdfghjklsdgfdsfdsfsdfsdfd
-hello
+[
+  {
+  "artur": 18,
+  "misha": 20,
+  "sergey": 4
+
+},
+  12, 21
+]

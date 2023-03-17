@@ -1,37 +1,19 @@
-import math
+import os
 
+path = os.path.abspath(input())
 
-class Point(object):
-    def __init__(self, x, y):
-        self.dy = None
-        self.dx = None
-        self.x = x
-        self.y = y
+size = 0
+msize = 0
+mfile = ''
 
-    def get_x(self):
-        return self.x
+for folder, subfolder, files in os.walk(path):
+    print(folder, subfolder, files)
+    for file in files:
+        size = os.stat(os.path.join(folder, file)).st_size
 
-    def get_y(self):
-        return self.y
+        if size > msize:
+            msize = size
+            mfile = os.path.join(folder, file)
 
-    def shift(self, dx, dy):
-        self.dx = dx
-        self.dy = dy
-        self.x = self.x + dx
-        self.y = self.y + dy
-
-    def distance(self, other):
-        return math.sqrt((other.x - self.x) ** 2 + (other.y - self.y) ** 2)
-"""
-
-    def __str__(self):
-        return f'Класс точки. {self.get_x(), self.get_y()}'
-"""
-
-point1 = Point(10, 4)
-point2 = Point(5, 12)
-
-print(point1.distance(point2))
-point1.shift(10, 1)
-print(point1.distance(point2))
-print(point2)
+print(f'The largest file is: {mfile}')
+print(f'Size: {msize} bytes')
